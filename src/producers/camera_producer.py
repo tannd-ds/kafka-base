@@ -128,8 +128,7 @@ class VideoProducer:
                 time.sleep(1.0 / self.config.video.fps)
 
                 # extra sleep, debugging only
-                time.sleep(1.0)
-                
+
         except KeyboardInterrupt:
             logger.info("Stopping video stream")
         except Exception as e:

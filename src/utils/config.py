@@ -35,9 +35,6 @@ def load_config() -> Config:
     """Load configuration from YAML file and environment variables."""
     # Load environment variables
     load_dotenv()
-
-    # print dotenv
-    print('This is dotenv', os.environ)
     
     # Get the config file path
     config_path = Path(__file__).parent.parent.parent / "config" / "config.yaml"
@@ -48,7 +45,6 @@ def load_config() -> Config:
     
     # Replace environment variables
     def replace_env_vars(value: Any) -> Any:
-        print('This is value', value)
         if isinstance(value, str) and value.startswith("${") and value.endswith("}"):
             env_var = value[2:-1]
             return os.getenv(env_var, value)

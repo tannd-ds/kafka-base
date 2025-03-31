@@ -40,7 +40,7 @@ videos/
 
 # Logs
 *.log
-logs/
+logs/   
 
 # Local development
 .DS_Store

@@ -131,7 +131,6 @@ class StreamProcessor:
                             # Store the frame to logs
                             frame_path = f"logs/frames/frame_{frame_number}.jpg"
                             cv2.imwrite(frame_path, frame)
-                            print('Saved frame into', frame_path)
                             
                             # Log results
                             logger.info(f"Processed frame {frame_number} from {video_path} at {timestamp}")
@@ -167,4 +166,6 @@ def main():
     processor.process_stream()
 
 if __name__ == "__main__":
-    main() 
+    # main() 
+    import os
+    os.system("python src/app.py")

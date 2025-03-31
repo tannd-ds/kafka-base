@@ -24,7 +24,7 @@ services:
   video-producer:
     build:
       context: ..
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/Dockerfile_producer
     command: python src/producers/camera_producer.py
     depends_on:
       - kafka
