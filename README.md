@@ -53,37 +53,15 @@ docker-compose up
 
 ## Usage
 
-### Non-Docker
-
-1. Start the Kafka cluster:
-```bash
-docker-compose up -d kafka zookeeper
-```
-
-2. Run the camera producer:
-```bash
-python src/producers/camera_producer.py
-```
-
-3. Run the stream processor:
-```bash
-python src/consumers/stream_processor.py
-```
-
-### Docker
-
 1. Build the Docker image:
 ```bash
 cd docker
 docker-compose up --build
 ```
 
-2. To run Flask app:
-```bash
-docker exec -it <container_id> /bin/bash
-python src/app.py
-```
+Make sure `docker-video-producer` and `docker-stream-processor` is running.
 
+Open Browser and direct to `localhost:5000`
 
 ## Configuration
 

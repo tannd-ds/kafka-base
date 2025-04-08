@@ -20,7 +20,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Final stage
-FROM python:3.9-slim
+FROM builder
 
 # Add labels for better maintainability
 LABEL maintainer="Your Name <your.email@example.com>"
